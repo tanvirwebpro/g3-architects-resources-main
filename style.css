@@ -70,7 +70,7 @@ line-height: normal;
   padding: 50px 250px;
   margin: 0 auto;
 }
-.banner-description{
+.text-description{
   color: var(--Dark-03, #727272);
 text-align: center;
 font-family: Work Sans;
@@ -126,16 +126,7 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
-.feature-description{
-  text-align: center;
-  color: var(--Dark-03, #727272);
-font-family: Work Sans;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px; /* 162.5% */
-padding-right: 30px;
-}
+
 
 
 
@@ -152,15 +143,20 @@ padding-right: 30px;
 
 
 @media screen and (max-width:576px) {
-  nav , ul {
+  nav , ul , .feature{
     flex-direction: column;
   }
   header ,.banner-container{
     padding: 0px;
   }
+  .feature-img{
+    display: flex;
+    flex-direction: column;
+  }
   header{
     background: 100%;
     nav-left: 0px;
+  
   }
 }
 @media screen and (min-width:576px) and (max-width:960px) {
@@ -173,6 +169,12 @@ padding-right: 30px;
   ul{
     
     justify-content:center ;
+  }
+  .feature{
+    flex-direction: column-reverse;
+  }
+  .feature-text{
+    text-align: center;
   }
   
 }
